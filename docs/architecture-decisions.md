@@ -4,7 +4,7 @@ Decisions that refine `implementation-spec.md` and `technical-plan.md`. Where th
 disagree, this file wins. Each entry: decision, why, consequence. Change an entry only by
 editing it here in the same commit as the code that changes the decision.
 
-GCP project: `relief-radar-511616` · Region: `asia-south1` · Decided 2026-10-14.
+GCP project: `relief-radar-511713` · Region: `asia-south1` · Decided 2026-10-14.
 
 ## D1 Toolchain
 - **Decision:** a uv workspace with one root `pyproject.toml` and one `uv.lock`. Python 3.12
@@ -90,7 +90,7 @@ Every Python member uses a src layout and an `rr_` import prefix.
 ## D8 Configuration
 - **Decision:** pydantic-settings with an `RR_` prefix, defined in `rr_core.settings`.
   `.env.example` lists these variables:
-  - `GOOGLE_CLOUD_PROJECT=relief-radar-511616`
+  - `GOOGLE_CLOUD_PROJECT=relief-radar-511713`
   - `RR_REGION=asia-south1`
   - `VERTEX_LOCATION`, `RR_GEMINI_MODEL`, `RR_AI_MODE`, `RR_BUS`, `RR_STORE`
   - `FIRESTORE_EMULATOR_HOST`, `PUBSUB_EMULATOR_HOST`, `FIREBASE_AUTH_EMULATOR_HOST`
@@ -166,7 +166,7 @@ relief-radar/
 
 ## Project bootstrap checklist
 Do these before milestone 5:
-1. Run `gcloud auth login`, then `gcloud config set project relief-radar-511616`.
+1. Run `gcloud auth login`, then `gcloud config set project relief-radar-511713`.
 2. Run `npm i -g firebase-tools`, install Java, then run `firebase login`.
 3. Register the project for Earth Engine.
 4. Confirm billing and trial credits, then set low-threshold budget alerts.
